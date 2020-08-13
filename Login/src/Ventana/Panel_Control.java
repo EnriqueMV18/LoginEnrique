@@ -5,11 +5,15 @@
  */
 package Ventana;
 
-import com.sun.xml.internal.ws.api.streaming.XMLStreamReaderFactory;
+
 import java.awt.Image;
 import java.awt.Toolkit;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
+
+
+
+
 /**
  *
  * @author ASUS
@@ -17,10 +21,13 @@ import javax.swing.table.DefaultTableModel;
 public class Panel_Control extends javax.swing.JFrame {
     DefaultTableModel model=new DefaultTableModel();
     
+    
+    
     /**
      * Creates new form Panel_Control
      */
     public Panel_Control() {
+        
         initComponents();
         this.setLocationRelativeTo(null);
         model.addColumn("Nombre");
@@ -29,12 +36,16 @@ public class Panel_Control extends javax.swing.JFrame {
         model.addColumn("Costo");
         this.jtabla.setModel(model);
     }
-
+    
+    
+            
     @Override
     public Image getIconImage(){
         Image retvalue = Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("Imagenes/625169.png"));
         return retvalue;
     }
+    
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -80,18 +91,18 @@ public class Panel_Control extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(jtabla);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 200, 880, 240));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 170, 880, 270));
 
         jnombre.setText("Nombre :");
         getContentPane().add(jnombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 60, 60, 20));
 
         japellidos.setText("         DNI :");
-        getContentPane().add(japellidos, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 90, 60, -1));
+        getContentPane().add(japellidos, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 60, 60, -1));
 
         txtdni.setBackground(new java.awt.Color(0, 0, 0));
         txtdni.setFont(new java.awt.Font("Dialog", 1, 10)); // NOI18N
         txtdni.setForeground(new java.awt.Color(255, 255, 255));
-        getContentPane().add(txtdni, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 90, 110, 20));
+        getContentPane().add(txtdni, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 60, 140, 20));
 
         txtnombre.setBackground(new java.awt.Color(0, 0, 0));
         txtnombre.setFont(new java.awt.Font("Dubai", 1, 10)); // NOI18N
@@ -101,10 +112,10 @@ public class Panel_Control extends javax.swing.JFrame {
                 txtnombreActionPerformed(evt);
             }
         });
-        getContentPane().add(txtnombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 60, 110, 20));
+        getContentPane().add(txtnombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 60, 140, 20));
 
         jpasteles.setText("Pasteles:");
-        getContentPane().add(jpasteles, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 60, -1, -1));
+        getContentPane().add(jpasteles, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 90, -1, -1));
 
         jcosto.setText("     Costo :");
         getContentPane().add(jcosto, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 90, -1, -1));
@@ -117,7 +128,7 @@ public class Panel_Control extends javax.swing.JFrame {
                 jagregarActionPerformed(evt);
             }
         });
-        getContentPane().add(jagregar, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 90, 90, 20));
+        getContentPane().add(jagregar, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 90, 90, 20));
 
         jeditar.setBackground(new java.awt.Color(51, 51, 51));
         jeditar.setForeground(new java.awt.Color(204, 204, 204));
@@ -127,7 +138,7 @@ public class Panel_Control extends javax.swing.JFrame {
                 jeditarActionPerformed(evt);
             }
         });
-        getContentPane().add(jeditar, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 60, 90, 20));
+        getContentPane().add(jeditar, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 60, 90, 20));
 
         jeliminar.setBackground(new java.awt.Color(51, 51, 51));
         jeliminar.setForeground(new java.awt.Color(204, 204, 204));
@@ -137,7 +148,7 @@ public class Panel_Control extends javax.swing.JFrame {
                 jeliminarActionPerformed(evt);
             }
         });
-        getContentPane().add(jeliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 90, 90, 20));
+        getContentPane().add(jeliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 90, 90, 20));
 
         cbpastel.setBackground(new java.awt.Color(255, 255, 255));
         cbpastel.setForeground(new java.awt.Color(0, 0, 0));
@@ -147,7 +158,7 @@ public class Panel_Control extends javax.swing.JFrame {
                 cbpastelActionPerformed(evt);
             }
         });
-        getContentPane().add(cbpastel, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 60, 160, 20));
+        getContentPane().add(cbpastel, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 90, 160, 20));
 
         cbcosto.setBackground(new java.awt.Color(255, 255, 255));
         cbcosto.setForeground(new java.awt.Color(0, 0, 0));
@@ -162,7 +173,7 @@ public class Panel_Control extends javax.swing.JFrame {
                 jnuevoActionPerformed(evt);
             }
         });
-        getContentPane().add(jnuevo, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 60, 90, 20));
+        getContentPane().add(jnuevo, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 60, 90, 20));
 
         jwallpaper2.setForeground(new java.awt.Color(0, 0, 0));
         jwallpaper2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/sunrise-illustration-digital-art-uhdpaper.com-4K-4.1963-wp.thumbnail.jpg"))); // NOI18N
